@@ -25,7 +25,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ["DEBUG"])
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["ianhenderson.herokuapp.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -121,10 +121,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_ROOT = ''
+STATIC_ROOT = '/var/www/example.com/static/'
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join('static'),)
-
-ALLOWED_HOSTS=["ianhenderson.herokuapp.com", "localhost", "127.0.0.1"]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]
