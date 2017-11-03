@@ -126,3 +126,5 @@ STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join('static'),)
+
+ALLOWED_HOSTS=["ianhenderson.herokuapp.com", "localhost", "127.0.0.1"]
