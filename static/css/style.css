@@ -1,9 +1,6 @@
-html {
+body, html {
     background-color: #032b35;
-}
-
-body {
-    padding-top: 3.5rem;
+    height: 100%;
 }
 
 #particles-js {
