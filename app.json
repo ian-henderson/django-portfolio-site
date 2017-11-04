@@ -1,9 +1,9 @@
 {
     "environments": {
-      "test": {
-        "scripts": {
-          "test": "python manage.py test"
+        "test": {
+            "scripts": {
+                "test": "python manage.py test"
+            }
         }
-      }
     }
-  }
+}
