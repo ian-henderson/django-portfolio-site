@@ -41,7 +41,7 @@
                                 <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Projects
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -55,7 +55,8 @@
         </div>
         <div class="hero-body">
             <div class="container text-center">
-                {% block title %}{% endblock %}
+                <h1 class="mb-3"><kbd id="title">{% block title %}{% endblock %}</kbd></h1>
+                <p class="lead">{% block subtitle %}{% endblock %}</p>
             </div>
         </div>
     </section>
