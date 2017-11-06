@@ -3,6 +3,12 @@ html, body {
     text-rendering: optimizeLegibility;
 }
 
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1012px;
+  }
+
 .hero {
     align-items: stretch;
     background: #fff;
