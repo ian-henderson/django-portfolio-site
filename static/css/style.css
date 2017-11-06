@@ -1,22 +1,22 @@
 html, body {
     height: 100%;
-    background: #fff;
+    text-rendering: optimizeLegibility;
 }
 
 .hero {
     width: 100%;
-    background: linear-gradient(160deg, #082f3b, #04282f);
+    /* background: linear-gradient(160deg, #81a7f1, #1e60e5); */
+    background: #fff;
+    border-bottom: thin solid black;
     align-items: stretch;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-#particles-js {
-    position: absolute;
+    position: relative;
 }
 
 canvas {
+    opacity: 0.9;
     position: absolute;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -40,6 +40,6 @@ canvas {
     z-index: 1;
 }
 
-#title {
-    background: rgba(0, 0, 0, 0);
+main {
+    padding: 3rem 1.5rem;
 }
