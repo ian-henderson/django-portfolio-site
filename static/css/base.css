@@ -4,15 +4,14 @@ html, body {
 }
 
 .hero {
-    width: 100%;
-    /* background: linear-gradient(160deg, #81a7f1, #1e60e5); */
+    align-items: stretch;
     background: #fff;
     border-bottom: thin solid black;
-    align-items: stretch;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    width: 100%;
 }
 
 canvas {
@@ -31,15 +30,15 @@ canvas {
 }
 
 .hero-body {
-    padding: 1rem 1.5rem 4rem;
     flex-grow: 1;
     flex-shrink: 0;
+    padding: 0.5rem 1.5rem 2rem;
 }
 
 .hero-nav, .hero-body {
     z-index: 1;
 }
 
-main {
+.content {
     padding: 3rem 1.5rem;
 }

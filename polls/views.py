@@ -11,6 +11,17 @@ class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
 
+    def get_context_data(self, **kwargs):
+        """
+        Return a quote.
+        """
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context['quote'] = {
+            'content': 'Polls? Nah... they\'re for strippers and cross country skiers.',
+            'author': 'Sarah Palin'
+        }
+        return context
+
     def get_queryset(self):
         """
         Return the last five published questions (not including those set to be
@@ -19,10 +30,6 @@ class IndexView(generic.ListView):
         return Question.objects.filter(
             pub_date__lte=timezone.now()
         ).order_by('-pub_date')[:5]
-
-
-class CreateView(generic.TemplateView):
-    template_name = 'polls/create.html'
 
 
 class DetailView(generic.DetailView):

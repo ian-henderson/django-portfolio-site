@@ -5,10 +5,47 @@ Polls
 {% endblock %}
 
 {% block subtitle %}
+<blockquote class="blockquote">
+    <p class="mb-1">{{ quote.content }}</p>
+    <footer class="blockquote-footer"><cite title="{{ quote.author }}">{{ quote.author }}</cite></footer>
+</blockquote>
 {% endblock %}
 
 {% block content %}
-<div class="container text-center pt-5">
-    <h1><a class="btn btn-primary btn-lg" href="create" role="button">Create a poll</a></h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="mb-3">Create a new poll</h2>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Question</label>
+                    <input type="text" class="form-control" id="question" aria-describedby="Question" placeholder="Enter question">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Choices</label>
+                    <div class="input-group">
+                        <div class="input-group mb-1">
+                            <input type="text" class="form-control" placeholder="Choice 1" aria-label="Choice 1" aria-describedby="basic-addon2">
+                            <span class="input-group-addon close" id="basic-addon2">&times;</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group mb-1">
+                            <input type="text" class="form-control" placeholder="Choice 2" aria-label="Choice 2" aria-describedby="basic-addon2">
+                            <span class="input-group-addon close" id="basic-addon2">&times;</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group mb-1">
+                            <input type="text" class="form-control" placeholder="Choice 3" aria-label="Choice 3" aria-describedby="basic-addon2">
+                            <span class="input-group-addon close" id="basic-addon2">&times;</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-link">+ Add a choice</button>
+                <button type="submit" class="btn btn-primary float-right">Create</button>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}
