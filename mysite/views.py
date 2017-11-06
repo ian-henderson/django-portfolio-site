@@ -1,6 +1,5 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
 
-def home(request):
-    context = {}
-    return render(request, 'mysite/base.html', context)
+class IndexView(TemplateView):
+    template_name = "mysite/index.html"
