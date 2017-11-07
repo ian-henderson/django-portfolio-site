@@ -1,1 +1,1 @@
-web: gunicorn mysite/wsgi.py --log-file -
+web: python manage.py collectstatic --no-input; python manage.py run_gunicorn -b 0.0.0.0:$PORT;
