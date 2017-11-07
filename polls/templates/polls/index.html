@@ -17,9 +17,9 @@ Polls
     function addChoice(divId) {
         choiceCount++;
         var newChoice = document.createElement('div');
-        newChoice.className += 'input-group';
+        newChoice.className += 'input-group mb-2';
         newChoice.id = String(choiceCount);
-        newChoice.innerHTML = '<div class="input-group mb-2" id="' + String(choiceCount) +'"><input type="text" class="form-control" placeholder="Enter choice" aria-label="Enter choice" aria-describedly="basic-addon2"><span class="input-group-addon close" id="basic-addon2" onClick="removeChoice(' + String(choiceCount) +')">&times;</span></div>'
+        newChoice.innerHTML = '<input type="text" class="form-control" placeholder="Enter choice" aria-label="Enter choice" aria-describedly="basic-addon2"><span class="input-group-addon close" id="basic-addon2" onClick="removeChoice(' + String(choiceCount) +')">&times;</span>'
         document.getElementById(divId).appendChild(newChoice);
     }
     function removeChoice(choiceId) {
