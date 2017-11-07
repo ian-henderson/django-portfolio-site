@@ -12,38 +12,44 @@ Polls
 {% endblock %}
 
 {% block content %}
+<script>
+    var choiceCount = 2;
+    function addChoice(divId) {
+        choiceCount++;
+        var newChoice = document.createElement('div');
+        newChoice.className += 'input-group';
+        newChoice.id = String(choiceCount);
+        newChoice.innerHTML = '<div class="input-group mb-2" id="' + String(choiceCount) +'"><input type="text" class="form-control" placeholder="Enter choice" aria-label="Enter choice" aria-describedly="basic-addon2"><span class="input-group-addon close" id="basic-addon2" onClick="removeChoice(' + String(choiceCount) +')">&times;</span></div>'
+        document.getElementById(divId).appendChild(newChoice);
+    }
+    function removeChoice(choiceId) {
+        if (choiceCount <= 2) return null;
+        choiceCount--;
+        var choice = document.getElementById(String(choiceId));
+        document.getElementById('choices').removeChild(choice);
+    }
+</script>
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <h1 class="mb-3">Create a new poll</h1>
+            <h2 class="mb-4">Create a new poll</h2>
             <form>
-                <div class="form-group">
+                <div class="form-group mb-4">
                     <label for="exampleInputEmail1">Question</label>
                     <input type="text" class="form-control" id="question" aria-describedby="Question" placeholder="Enter question">
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-4" id="choices">
                     <label for="exampleInputPassword1">Choices</label>
-                    <div class="input-group">
-                        <div class="input-group mb-1">
-                            <input type="text" class="form-control" placeholder="Choice 1" aria-label="Choice 1" aria-describedby="basic-addon2">
-                            <span class="input-group-addon close" id="basic-addon2">&times;</span>
-                        </div>
+                    <div class="input-group mb-2" id="1">
+                        <input type="text" class="form-control" placeholder="Enter choice" aria-label="Enter choice" aria-describedby="basic-addon2">
                     </div>
-                    <div class="input-group">
-                        <div class="input-group mb-1">
-                            <input type="text" class="form-control" placeholder="Choice 2" aria-label="Choice 2" aria-describedby="basic-addon2">
-                            <span class="input-group-addon close" id="basic-addon2">&times;</span>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <div class="input-group mb-1">
-                            <input type="text" class="form-control" placeholder="Choice 3" aria-label="Choice 3" aria-describedby="basic-addon2">
-                            <span class="input-group-addon close" id="basic-addon2">&times;</span>
-                        </div>
+                    <div class="input-group mb-2" id="2">
+                        <input type="text" class="form-control" placeholder="Enter choice" aria-label="Enter choice" aria-describedby="basic-addon2">
                     </div>
                 </div>
-                <button class="btn btn-link">+ Add a choice</button>
+                <div type="button d-inline" onClick="addChoice('choices')"class="btn btn-secondary">Add a choice</div>
                 <button type="submit" class="btn btn-primary float-right">Create</button>
+                </div>
             </form>
         </div>
     </div>
