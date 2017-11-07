@@ -126,5 +126,6 @@ STATIC_ROOT = '/var/www/django-portfolio-site.com/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'polls/static'),
 ]
