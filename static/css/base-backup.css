@@ -4,10 +4,10 @@ html, body {
 }
 
 .container {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     max-width: 1012px;
-}
+  }
 
 .hero {
     align-items: stretch;
@@ -29,18 +29,19 @@ canvas {
     -ms-user-select: none;
 }
 
-.hero-nav, .hero-body {
+.hero-nav {
     flex-grow: 1;
     flex-shrink: 0;
-}
-
-.hero-nav {
     padding: 0.5rem 0;
-    z-index: 2;
 }
 
 .hero-body {
-    padding: 0.5rem 1rem 2rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0.25rem 0 1.5rem;
+}
+
+.hero-nav, .hero-body {
     z-index: 1;
 }
 
