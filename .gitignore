@@ -1,3 +1,5 @@
+staticfiles/*
+
 # Vim
 # https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
 [._]*.s[a-v][a-z]
